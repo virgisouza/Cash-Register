@@ -1,7 +1,9 @@
-#header{
+#display{
 
 	color: pink;
-	background-color: yellow;
+	background-color: green;
+	border-radius: 2;
+	border: 2;
 
 };
 
