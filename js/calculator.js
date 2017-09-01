@@ -6,61 +6,63 @@ var calculator =(function(){
 	var memory = 0;
 	var disArr = [];
 
-function add(num){
-	total += num;
+function add(num1, num2){
+	total = num1 + num2;
 	return total;
 }
 
-function subtract(num){
-	total -= num;
+function subtract(num1, num2){
+	total = num1 - num2;
 	return total;
 }
 
-function divide(num){
-	total = total / num;
+function divide(num1, num2){
+	total = num1 / num2;
 	return total;
 }
 
-function multiply(num){
-	total = total * num;
+function multiply(num1, num2){
+	total = num1 * num2;
 	return total;
 }
 
 function equalsTo(num){
-	//initialize function operation in display or memory
+
+	return total;
+	//initialize function operation 
 }
 
 function display(num){
-	disArr.push(num); //when onKey event is initialized, number data will get pushed into empty array (disArr)
-	if(disArr.length >= 2){ //combine number elements in array into one number value ([1,2,3,4] === [1234])
-		var number = disArr.join('');
-			//parseInt(disArr);
-			//console.log(disArr)
+	disArr.push(num);    //when onKey event is initialized, number data will get pushed into empty array (disArr)
+		if(disArr.length >= 1){    //combine number elements in array into one number value ([1,2,3,4] === [1234])
+			 var number = disArr.join('');
+			 memory = number;
+			 return memory;
+
 	} 
-	return number; // [display] will hold disArr element
 };
 
-//cash_register.js wil initialize diplay function as each number has onKey event
-display(4)
-display(5)
-display(6)
-display(7)
-
-
 function clear(){
-	//will clear out display
+	memory = 0;
+	disArr.push(memory);
+	return disArr;   //will clear out display and show 0.
 }
 
+
 function getBalance(){
+	return memory;
 	//will display current balance
 }
 
-function depositCash(){
+function depositCash(num){
+	memory = total + num;
+	return disArr;
 	//add the amount currently in the [display] to the cash reg, then clears the display
 }
 
-function withdrawCash(arr){
-
+function withdrawCash(num){
+	memory = total - num;
+	return disArr;
 	//will remove the amount currently in the [display] to the cash reg, then clears the display
 }
 

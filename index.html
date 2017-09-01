@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Virgi"s Cash Register</title>
+	<title>Virgi's Cash Register</title>
 	<link rel="stylesheet" href="./css/cash_reg.css" type="text/css"/>
 </head>
 <body>
@@ -10,7 +10,51 @@
 <div id= 'container'> 
 
 	<h1 id='display'></h1>
-	<button> Total </button>
+
+	<br>
+
+	<table class= 'calcTable'>
+		<tr class='firstRowDigits'>
+			<button id='digit'> 7 </button>
+			<button id='digit'> 8 </button>
+			<button id='digit'> 9 </button>
+			<button id='operation'> ÷ </button>
+		</tr>
+		<br>
+		<tr class='secondRowDigits'>
+			<button id='digit'> 4 </button>
+			<button id='digit'> 5 </button>
+			<button id='digit'> 6 </button>
+			<button id='operation'> x </button>
+		</tr>
+		<br>
+		<tr class='thirdRowDigits'>
+			<button id='digit'> 1 </button>
+			<button id='digit'> 2 </button>
+			<button id='digit'> 3 </button>
+			<button id='operation'> - </button>
+		</tr>
+		<br>
+		<tr class='fourthRowDigits'>
+			<button id='digit'> 0 </button>
+			<button id='digit'> 00 </button>
+			<button id='digit'> . </button>
+			<button id='operation'> + </button>
+		</tr>
+		<br>
+		<tr>
+			<button id='operation'> = </button>
+		</tr>
+	</table>
+
+	<br>
+
+	<div class= 'Register'>
+		<button id= 'clearButton'> Clear </button>
+		<button id= 'getBalanceButton'> Get Balance </button>
+		<button id='depositCashButton'> Deposit Cash </button>
+		<button id='withdrawCashButton'> Withdraw Cash </button>
+	</div>
 
 </div>
 	
