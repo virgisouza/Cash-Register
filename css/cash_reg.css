@@ -4,8 +4,19 @@
 	background-color: green;
 	border-radius: 2;
 	border: 2px solid black;
-	
 
-};
+}
 
+.calcTable{
+	background-color: orange;
+}
 
+#digits{
+	background-color: blue;
+
+}
+
+.register{
+	background-color: red;
+
+}

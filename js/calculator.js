@@ -3,10 +3,12 @@
 var calculator =(function(){
 
 	var total = 0.00;
-	var memory = 0;
+	var memory = [];
 	var disArr = [];
 
 function add(num1, num2){
+	num1 = memory;
+	console.log(num1)
 	total = num1 + num2;
 	return total;
 }
@@ -33,25 +35,28 @@ function equalsTo(num){
 }
 
 function display(num){
-	disArr.push(num);    //when onKey event is initialized, number data will get pushed into empty array (disArr)
-		if(disArr.length >= 1){    //combine number elements in array into one number value ([1,2,3,4] === [1234])
-			 var number = disArr.join('');
-			 memory = number;
-			 return memory;
+	disArr.push(num);    
+	var number = disArr.join(''); 
+	memory.push(number);
+	return number;
+}
 
-	} 
-};
 
 function clear(){
 	memory = 0;
 	disArr.push(memory);
-	return disArr;   //will clear out display and show 0.
+	var clearedOut = disArr.pop();
+	return clearedOut;   //will clear out display and show 0.
 }
 
 
-function getBalance(){
+function getBalance(){  //will display current balance
+	if(memory.length > 0){
+	var newMem = memory.pop();
+	return newMem;
+}else{
 	return memory;
-	//will display current balance
+	}
 }
 
 function depositCash(num){
