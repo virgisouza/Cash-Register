@@ -9,51 +9,41 @@
 
 <div id= 'container'> 
 
-	<h1 id='display'></h1>
+	<div id='display'></div>
 
 	<br>
 
-	<table class= 'calcTable'>
-		<tr class='digits'>
-			<button id='digit7'> 7 </button>
-			<button id='digit8'> 8 </button>
-			<button id='digit9'> 9 </button>
-			<button id='DivideOperation'> ÷ </button>
-		</tr>
+	<div class= 'calcTable'>
+			<button value= '7' class='digits' id='digit7'> 7 </button>
+			<button value= '8' class='digits' id='digit8'> 8 </button>
+			<button value= '9' class='digits' id='digit9'> 9 </button>
+			<button value= '÷' class='digits' id='divideOperation'> ÷ </button>
 		<br>
-		<tr class='digits'>
-			<button id='digit4'> 4 </button>
-			<button id='digit5'> 5 </button>
-			<button id='digit6'> 6 </button>
-			<button id='multiplyOperation'> x </button>
-		</tr>
+			<button value= '4' class='digits' id='digit4'> 4 </button>
+			<button value= '5' class='digits' id='digit5'> 5 </button>
+			<button value= '6' class='digits' id='digit6'> 6 </button>
+			<button value= '*' class='digits' id='multiplyOperation'> x </button>
 		<br>
-		<tr class='digits'>
-			<button id='digit1'> 1 </button>
-			<button id='digit2'> 2 </button>
-			<button id='digit3'> 3 </button>
-			<button id='subtractOperation'> - </button>
-		</tr>
+			<button value= '1' class='digits' id='digit1'> 1 </button>
+			<button value= '2' class='digits' id='digit2'> 2 </button>
+			<button value= '3' class='digits' id='digit3'> 3 </button>
+			<button value= '-' class='digits' id='subtractOperation'> - </button>
 		<br>
-		<tr class='digits'>
-			<button id='digit0'> 0 </button>
-			<button id='digit00'> 00 </button>
-			<button id='digit.'> . </button>
-			<button id='addOperation'> + </button>
-		</tr>
+			<button value= '0' class='digits' id='digit0'> 0 </button>
+			<button value= '00' class='digits' id='digit00'> 00 </button>
+			<button value='.' class='digits' id='digit.'> . </button>
+			<button value= '+' class='digits' id='addOperation'> + </button>
 		<br>
-		<tr class='digits'>
-			<button id='equalsToOperation'> = </button>
-		</tr>
-	</table>
-
+			<button value= '=' class='digits' id='equalsToOperation'> = </button>
+	</div>
+	
 	<br>
 
 	<div class= 'register'>
-		<button id= 'clearButton'> Clear </button>
-		<button id= 'getBalanceButton'> Get Balance </button>
-		<button id='depositCashButton'> Deposit Cash </button>
-		<button id='withdrawCashButton'> Withdraw Cash </button>
+		<button class= 'register' id= 'clearButton'> Clear </button>
+		<button class= 'register' id= 'getBalanceButton'> Get Balance </button>
+		<button class= 'register' id='depositCashButton'> Deposit Cash </button>
+		<button class= 'register' id='withdrawCashButton'> Withdraw Cash </button>
 	</div>
 
 </div>
