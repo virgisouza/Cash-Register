@@ -1,6 +1,50 @@
 
-//digit event listeners
+//digit & Operations event listeners
+//cleaned up code after John's advice about DRY coding
 
+//DRY for loop to addEventListener to digits
+var elem = document.getElementsByClassName('digits');
+for(var i = 0; i<elem.length; i++){
+	elem[i].addEventListener('click', function(event){
+		document.getElementById('display').innerHTML += this.value;
+	}, true);
+}
+
+//equalsTo
+document.getElementById('equalsToOperation').addEventListener('click', function(event){
+	document.getElementById('display').innerHTML = calculator.equalsTo();
+	console.log('equalsTo')
+}, true);
+
+//clear
+ document.getElementById('clearButton').addEventListener('click',function (event){
+ 	document.getElementById('display').innerHTML = calculator.clear();
+ 	console.log('clear')
+ }, true);
+
+
+//getBalance
+document.getElementById('getBalanceButton').addEventListener('click', function(event){
+	document.getElementById('display').innerHTML = calculator.getBalance();
+	console.log('getBalance');
+}, true);
+
+//depositCash
+document.getElementById('depositCashButton').addEventListener('click', function(event){
+	document.getElementById('display').innerHTML = calculator.depositCash();
+	console.log('depositCash')
+}, true);
+
+//withdrawCash
+document.getElementById('withdrawCashButton').addEventListener('click', function(event){
+	document.getElementById('display').innerHTML = calculator.withdrawCash();
+	console.log('withdrawCash')
+}, true);
+
+
+//all code used before using for-loop to add click events
+
+/*
 //00
 document.getElementById('digit00').addEventListener('click', function(event){
 	document.getElementById('display').innerHTML += this.value;
@@ -73,6 +117,8 @@ document.getElementById('digit.').addEventListener('click', function(event){
 	document.getElementById('display').innerHTML += this.value;
 }, true);
 
+
+
 //operations event listeners
 
 //add
@@ -95,37 +141,6 @@ document.getElementById('divideOperation').addEventListener('click', function(ev
 document.getElementById('multiplyOperation').addEventListener('click', function(event){
 	document.getElementById('display').innerHTML += this.value;
 }, true);
-
-//equalsTo
-document.getElementById('equalsToOperation').addEventListener('click', function(event){
-	document.getElementById('display').innerHTML = calculator.equalsTo();
-	console.log('equalsTo')
-}, true);
-
-//clear
- document.getElementById('clearButton').addEventListener('click',function (event){
- 	document.getElementById('display').innerHTML = calculator.clear();
- 	console.log('clear')
- }, true);
-
-
-//getBalance
-document.getElementById('getBalanceButton').addEventListener('click', function(event){
-	document.getElementById('display').innerHTML = calculator.getBalance();
-	console.log('getBalance');
-}, true);
-
-//depositCash
-
-//withdrawCash
-
-
-
-/*
-## cash_register.js
-
-Write the rest of the logic to perform the necessary functions to achieve the goal.  
-You may create modules within `cash_register.js` in order to separate concerns.  
-For example, the function of updating the `( display )` should be handled in one place, or one module, instead of interweaved throughout the spaghetti.  
-
 */
+
+
